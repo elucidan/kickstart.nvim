@@ -1,3 +1,3 @@
 return {
-  'mhartington/oceanic-next',
+  'Mofiqul/vscode.nvim',
 }
