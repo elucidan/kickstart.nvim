@@ -413,6 +413,10 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>fn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[F]ind [N]eovim files' })
+
+      vim.keymap.set('n', '<leader>cd', function()
+        builtin.find_files { cwd = 'C:\\Users\\davey\\Documents\\dev\\flutter\\packages\\flutter\\lib\\src' }
+      end, { desc = '[C]ode [D]ocs' })
     end,
   },
 
@@ -583,7 +587,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
+        tsserver = {},
         --
         lua_ls = {
           -- cmd = {...},
