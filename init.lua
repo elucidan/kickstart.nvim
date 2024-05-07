@@ -415,7 +415,7 @@ require('lazy').setup({
       end, { desc = '[F]ind [N]eovim files' })
 
       vim.keymap.set('n', '<leader>cd', function()
-        builtin.find_files { cwd = 'C:\\Users\\davey\\Documents\\dev\\flutter\\packages\\flutter\\lib\\src' }
+        builtin.find_files { cwd = '/Users/elucidan/development/flutter/examples/api/lib' }
       end, { desc = '[C]ode [D]ocs' })
     end,
   },
