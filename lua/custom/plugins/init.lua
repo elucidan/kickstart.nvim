@@ -5,46 +5,6 @@
 -- See the kickstart.nvim README for more information
 return {
   {
-    'akinsho/flutter-tools.nvim',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'stevearc/dressing.nvim', -- optional for vim.ui.select
-    },
-    config = true,
-  },
-  {
-    'ThePrimeagen/harpoon',
-    branch = 'harpoon2',
-    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
-    config = function()
-      local harpoon = require 'harpoon'
-      harpoon:setup()
-
-      vim.keymap.set('n', '<leader>a', function()
-        harpoon:list():add()
-      end)
-      vim.keymap.set('n', '<C-e>', function()
-        harpoon.ui:toggle_quick_menu(harpoon:list())
-      end)
-
-      -- Toggle previous & next buffers stored within Harpoon list
-      vim.keymap.set('n', '<leader>hp', function()
-        harpoon:list():prev()
-      end)
-      vim.keymap.set('n', '<leader>hn', function()
-        harpoon:list():next()
-      end)
-    end,
-  },
-  {
-    'elucidan/flutter-bloc.nvim',
-    config = function()
-      vim.keymap.set('n', '<Leader>cfb', "<cmd>lua require('flutter-bloc').create_bloc()<cr>", { desc = '[C]reate [F]lutter [B]loc' })
-      vim.keymap.set('n', '<Leader>cfc', "<cmd>lua require('flutter-bloc').create_cubit()<cr>", { desc = '[C]reate [F]lutter [C]ubit' })
-    end,
-  },
-  {
     {
       'L3MON4D3/LuaSnip',
       -- follow latest release.
