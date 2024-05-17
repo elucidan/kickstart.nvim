@@ -1,4 +1,12 @@
 return {
+  {
+    lazy = false,
+    priority = 1000,
+    dir = '~/plugins/colorbuddy.nvim',
+    config = function()
+      vim.cmd.colorscheme 'monet'
+    end,
+  },
   'Mofiqul/vscode.nvim',
   'mhinz/vim-janah',
   {
