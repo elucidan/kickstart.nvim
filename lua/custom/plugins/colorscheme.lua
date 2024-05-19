@@ -4,10 +4,11 @@ return {
     priority = 1000,
     dir = '~/plugins/colorbuddy.nvim',
     config = function()
-      vim.cmd.colorscheme 'monet'
+      vim.cmd.colorscheme 'gruvbox'
     end,
   },
   'Mofiqul/vscode.nvim',
+  'morhetz/gruvbox',
   'mhinz/vim-janah',
   {
     'fynnfluegge/monet.nvim',
