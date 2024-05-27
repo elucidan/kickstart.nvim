@@ -98,7 +98,9 @@ vim.keymap.set('n', '<up>', '<C-W>+')
 vim.keymap.set('n', '<down>', '<C-W>-')
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
---
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
 --  See `:help wincmd` for a list of all window commands
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
